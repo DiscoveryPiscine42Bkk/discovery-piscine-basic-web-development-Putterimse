@@ -3,59 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random Color Button</title>
+  <title>Random Background Color</title>
   <style>
     body {
       text-align: center;
-      margin-top: 100px;
+      margin-top: 200px;
       transition: background-color 0.5s ease;
-    }
-
-    #colorBox {
-      width: 400px;
-      height: 150px;
-      margin: 20px auto;
-      background-color: white;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      transition: background-color 0.5s ease;
-      padding: 10px;
-    }
-
-    #myButton {
-      padding: 5px 10px;
-      font-size: 14px;
-      transition: all 0.3s ease;
-      cursor: pointer;
+      font-family: Arial, sans-serif;
     }
   </style>
 </head>
 <body>
 
-  <div id="colorBox">
-    <button id="myButton">Click me!</button>
-  </div>
+  <button id="colorButton">Click me!</button>
 
   <script>
-    const box = document.getElementById('colorBox');
-    const button = document.getElementById('myButton');
-    let clickCount = 0;
-
     function getRandomColor() {
-      // Generate a random color in hex format
-      const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-      return randomColor;
+      return '#' + Math.floor(Math.random() * 16777215).toString(16);
     }
 
-    button.addEventListener('click', () => {
-      // Change box color
-      const color = getRandomColor();
-      box.style.backgroundColor = color;
+    const button = document.getElementById('colorButton');
 
-      clickCount++;
-      const newSize = 14 + clickCount * 2;
-      button.style.fontSize = newSize + 'px';
+    button.addEventListener('click', function() {
+      document.body.style.backgroundColor = getRandomColor();
     });
   </script>
 
