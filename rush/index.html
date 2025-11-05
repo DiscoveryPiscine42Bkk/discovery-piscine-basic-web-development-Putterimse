@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select Account</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      width: 320px;
+    }
+
+    .logo img {
+      width: 120px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-weight: 400;
+      color: #202124;
+      margin-bottom: 24px;
+    }
+
+    .account-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .account {
+      border: 1px solid #dadce0;
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .account:hover {
+      background-color: #f7f8f8;
+    }
+
+    .profile-pic {
+      width: 64px;
+      height: 64px;
+      background-color: beige;
+      border-radius: 50%;
+    }
+
+    .add-account {
+      background: none;
+      border: none;
+      color: #1a73e8;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .add-account:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h2>Select an account</h2>
+
+    <div class="account-list">
+      <a href="resume.html" class="account" style="text-decoration:none;">
+        <div class="profile-pic"></div>
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>
