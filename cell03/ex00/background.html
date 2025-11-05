@@ -26,6 +26,10 @@
 
     button.addEventListener('click', function() {
       document.body.style.backgroundColor = getRandomColor();
+      clickCount++;
+      const newSize = 16 + clickCount * 4; // increase font size gradually
+      button.style.fontSize = newSize + 'px';
+      button.style.padding = (10 + clickCount * 2) + 'px ' + (20 + clickCount * 3) + 'px';
     });
   </script>
 
